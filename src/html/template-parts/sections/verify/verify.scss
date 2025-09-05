@@ -1,0 +1,92 @@
+@use '../../../../scss/vars/vars.scss' as v;
+@use '../../../../scss/mixins/media' as m;
+@use '../../../../scss/mixins/text' as t;
+
+.verify {
+  width: 100%;
+  position: relative;
+
+  .lines {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-wrapper {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    position: relative;
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      top: 44px;
+      transform: translateX(-50%);
+
+      img {
+        width: 32px;
+        height: 32px;
+
+        @include m.media(md) {
+          width: 44px;
+          height: 44px;
+        }
+      }
+    }
+  }
+
+  &-inner {
+    width: 100%;
+    max-width: 619px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 46px;
+  }
+
+  &-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    h1 {
+      font-family: v.$ff;
+      font-size: 28px;
+      font-weight: v.$fw-regular;
+      line-height: 130%;
+      color: v.$white;
+      max-width: 335px;
+      text-align: center;
+    }
+
+    p {
+      @include t.noahMain();
+    }
+  }
+
+  &-actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+}
