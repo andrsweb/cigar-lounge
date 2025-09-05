@@ -1,0 +1,15 @@
+@use '../vars/vars.scss' as v;
+@use '../mixins/media' as m;
+
+%default-text {
+  font-family: v.$ff;
+  font-weight: v.$fw-regular;
+  color: v.$white;
+}
+
+@mixin noahMain() {
+  @extend %default-text;
+  font-size: 20px;
+  line-height: 145%;
+  color: v.$main-text;
+}

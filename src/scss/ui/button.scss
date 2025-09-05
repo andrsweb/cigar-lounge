@@ -1,0 +1,28 @@
+@use '../vars/vars' as v;
+@use '../mixins/text' as t;
+@use '../mixins/media' as m;
+@use '../mixins/global' as g;
+@use '../utils/placeholders/buttons/button' as *;
+
+.button {
+  @extend %button;
+  min-width: 140px;
+  font-family: v.$ff;
+  @include t.noahMain();
+
+  @include m.media(sm) {
+    min-width: 195px;
+  }
+
+  &.transparent {
+    border-radius: 4px;
+    padding: 10px 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.50);
+
+    @include g.hover() {
+      background-color: v.$white;
+      color: v.$background;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use '../../../vars/vars.scss' as v;
+
+%button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	transition: opacity ease v.$tr, background-color ease v.$tr, color ease v.$tr;
+}

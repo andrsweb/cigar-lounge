@@ -4,9 +4,10 @@
 @forward 'common/typography';
 @forward 'common/grid';
 @forward 'common/base';
+@forward 'common/base';
 
-//Mixins
-@forward 'mixins/mixins';
+//ui
+@forward 'ui/button';
 
-// Utils
-@forward 'utils/placeholders/placeholders';
+//sections
+@forward '../html/template-parts/sections/verify/verify';

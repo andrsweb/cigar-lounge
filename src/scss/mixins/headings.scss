@@ -1,0 +1,60 @@
+@use '../vars/vars.scss' as v;
+@use '../mixins/media' as m;
+
+%default-title {
+  font-family: v.$ff-title;
+  font-weight: v.$fw-regular;
+  color: v.$white;
+}
+
+@mixin h0() {
+  @extend %default-title;
+  font-size: 22px;
+  line-height: 130%;
+
+  @include m.media(md) {
+    font-size: 48px;
+  }
+
+  @include m.media(xl) {
+    font-size: 64px;
+  }
+}
+
+@mixin h1() {
+  @extend %default-title;
+  font-size: 22px;
+  line-height: 130%;
+
+  @include m.media(md) {
+    font-size: 48px;
+  }
+
+  @include m.media(xl) {
+    font-size: 50px;
+  }
+}
+
+@mixin h2() {
+  @extend %default-title;
+  font-size: 22px;
+  line-height: 140%;
+
+  @include m.media(md) {
+    font-size: 28px;
+  }
+
+  @include m.media(xl) {
+    font-size: 36px;
+  }
+}
+
+@mixin h3() {
+  @extend %default-title;
+  font-size: 20px;
+  line-height: 148%;
+
+  @include m.media(xl) {
+    font-size: 28px;
+  }
+}
