@@ -8,5 +8,7 @@
 	outline: none;
 	border: none;
 	cursor: pointer;
+	padding: 0;
+	margin: 0;
 	transition: opacity ease v.$tr, background-color ease v.$tr, color ease v.$tr;
 }

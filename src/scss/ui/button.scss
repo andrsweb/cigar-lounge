@@ -6,19 +6,39 @@
 
 .button {
   @extend %button;
-  min-width: 140px;
   font-family: v.$ff;
-  @include t.noahMain();
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: v.$fw-regular;
+  line-height: 145%;
 
-  @include m.media(sm) {
-    min-width: 195px;
+  @include m.media(md) {
+    font-size: 20px;
+  }
+
+  &.white {
+    min-width: 120px;
+    background-color: v.$white;
+    color: v.$background;
+
+    @include m.media(sm) {
+      min-width: 180px;
+    }
+
+    @include g.hover() {
+      opacity: v.$op;
+    }
   }
 
   &.transparent {
-    border-radius: 4px;
-    padding: 10px 16px;
+    min-width: 140px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.50);
+
+    @include m.media(sm) {
+      min-width: 195px;
+    }
 
     @include g.hover() {
       background-color: v.$white;

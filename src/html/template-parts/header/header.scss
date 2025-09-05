@@ -1,9 +1,88 @@
 @use '../../../scss/vars/vars' as v;
+@use '../../../scss/mixins/media' as m;
+@use '../../../scss/mixins/global' as g;
+@use '../../../scss/utils/placeholders/buttons/button' as *;
 
 .header {
-	padding: 20px 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 24px 0;
 
 	&-wrapper {
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 64px;
+
+		.burger-button {
+			@extend %button;
+			width: 40px;
+			height: 40px;
+			position: relative;
+
+			@include m.media(md) {
+				width: 44px;
+				height: 44px;
+			}
+
+			@include m.media(xl) {
+				width: 70px;
+				height: 70px;
+			}
+
+			span {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 21px;
+				height: 1.5px;
+				background-color: v.$white;
+
+				@include m.media(md) {
+					width: 24px;
+					height: 2px;
+				}
+
+				@include m.media(xl) {
+					width: 34px;
+					height: 2.5px;
+				}
+
+				&:before, &:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					display: block;
+					width: 30px;
+					height: 1.5px;
+					background-color: v.$white;
+
+					@include m.media(md) {
+						width: 44px;
+						height: 2px;
+					}
+
+					@include m.media(xl) {
+						width: 64px;
+						height: 2.5px;
+					}
+				}
+
+				&:before {
+					top: -11px;
+				}
+
+				&:after {
+					top: 11px;
+				}
+			}
+
+			@include g.hover() {
+				opacity: v.$op;
+			}
+		}
 	}
 }
