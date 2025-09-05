@@ -2,6 +2,7 @@
 @use '../../../scss/mixins/media' as m;
 @use '../../../scss/mixins/global' as g;
 @use '../../../scss/utils/placeholders/buttons/button' as *;
+@use "sass:math";
 
 .header {
 	position: absolute;
@@ -31,11 +32,11 @@
 			}
 
 			&:before {
-				transform: translateX(-50%) translateX(-1200px/2 - 80px);
+				transform: translateX(-50%) translateX(math.div(-1200px, 2) - 80px);
 			}
 
 			&:after {
-				transform: translateX(-50%) translateX(1200px/2 + 80px);
+				transform: translateX(-50%) translateX(math.div(1200px, 2) + 80px);
 			}
 		}
 
