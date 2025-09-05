@@ -1,0 +1,10 @@
+<svg width="1440" height="820" viewBox="0 0 1440 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<circle cx="720" cy="435" r="149.5" stroke="#44413E"/>
+<rect x="720" y="115.707" width="450.895" height="450.895" transform="rotate(45 720 115.707)" stroke="#44413E"/>
+<line x1="719.5" y1="-300" x2="719.5" y2="285" stroke="#44413E"/>
+<line x1="870" y1="434.5" x2="1455" y2="434.5" stroke="#44413E"/>
+<line x1="-15" y1="434.5" x2="570" y2="434.5" stroke="#44413E"/>
+<line x1="720.5" y1="585" x2="720.5" y2="1170" stroke="#44413E"/>
+</g>
+</svg>

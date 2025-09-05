@@ -1,0 +1,9 @@
+@use '../../../vars/vars.scss' as v;
+
+%title {
+	font-family: v.$ff-title;
+	font-weight: v.$fw-regular;
+	line-height: v.$lh-title;
+	margin: 0;
+	padding: 0;
+}
