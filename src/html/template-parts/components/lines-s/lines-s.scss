@@ -32,6 +32,15 @@
     }
   }
 
+  &.type-c {
+    .lines-s-top {
+      .line {
+        background-color: transparent;
+      }
+    }
+
+  }
+
   &-top {
     width: 100%;
     display: flex;
