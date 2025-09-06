@@ -1,0 +1,46 @@
+@use '../../../../../scss/vars/vars.scss' as v;
+@use '../../../../../scss/mixins/headings' as h;
+@use '../../../../../scss/mixins/media' as m;
+
+.desc {
+  width: 100%;
+  padding: 24px 0;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 60px;
+
+    @include m.media(md) {
+      padding: 120px 0 60px;
+    }
+
+    @include m.media(xl) {
+      padding: 45px 0 90px;
+    }
+
+    h2 {
+      max-width: 343px;
+      color: v.$white;
+      text-align: center;
+      @include h.h2();
+
+      @include m.media(md) {
+        max-width: 566px;
+      }
+
+      @include m.media(xl) {
+        max-width: 735px;
+      }
+
+      br {
+        display: none;
+
+        @include m.media(md) {
+          display: block;
+        }
+      }
+    }
+  }
+}
