@@ -13,6 +13,10 @@
 @forward '../html/template-parts/header/header';
 @forward '../html/template-parts/footer/footer';
 
+//components
+@forward '../html/template-parts/components/lines-s/lines-s';
+
 //sections
 @forward '../html/template-parts/sections/verify/verify';
 @forward '../html/template-parts/sections/home/hero/hero';
+@forward '../html/template-parts/sections/home/desc/desc';
