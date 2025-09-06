@@ -33,14 +33,6 @@
       @include m.media(xl) {
         max-width: 735px;
       }
-
-      br {
-        display: none;
-
-        @include m.media(md) {
-          display: block;
-        }
-      }
     }
   }
 }
