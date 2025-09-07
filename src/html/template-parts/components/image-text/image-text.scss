@@ -1,0 +1,39 @@
+@use '../../../../scss/vars/vars' as v;
+@use '../../../../scss/mixins/media' as m;
+@use '../../../../scss/mixins/headings' as h;
+@use '../../../../scss/mixins/text' as t;
+
+.image-text {
+  width: 100%;
+  padding: 60px 0;
+
+  &-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 42px;
+  }
+
+  &-img {
+    width: calc(50% - 21px);
+    max-width: 619px;
+  }
+
+  &-desc {
+    width: calc(50% - 21px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+
+    h2 {
+      color: v.$white;
+      text-transform: uppercase;
+      @include h.h1();
+    }
+
+    p {
+      color: v.$main-text;
+      @include t.noahMain();
+    }
+  }
+}
