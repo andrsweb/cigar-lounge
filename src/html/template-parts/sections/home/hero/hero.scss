@@ -3,17 +3,12 @@
 
 .hero {
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
-	min-height: 680px;
+	min-height: 1181px;
 	position: relative;
-
-	@include m.media(md) {
-		min-height: 900px;
-	}
-
-	@include m.media(xl) {
-		min-height: 1141px;
-	}
+	padding: 40px 0 80px;
 
 	.overlay {
 		position: absolute;
@@ -22,7 +17,7 @@
 		left: 0;
 		bottom: -4px;
 		z-index: 1;
-		background: linear-gradient(0deg,rgba(9, 9, 9, 0.82) 38%, rgba(237, 237, 237, 0) 91%, rgba(255, 255, 255, 0) 100%);
+		background: linear-gradient(0deg,rgba(9, 9, 9, 1) 18%, rgba(237, 237, 237, 0) 91%, rgba(255, 255, 255, 0) 100%);
 	}
 
 	&-bg {
@@ -38,42 +33,107 @@
 	}
 
 	&-box {
-		width: 100%;
-		min-height: 100%;
+		width: 552px;
+		height: 552px;
 		display: flex;
-		align-items: flex-end;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
-		padding-bottom: 84px;
-		position: relative;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		z-index: 2;
 
-		@include m.media(md) {
-			padding-bottom: 70px;
+		.hero-logo {
+			max-height: 187px;
 		}
 
-		@include m.media(xl) {
-			padding-bottom: 273px;
+		p {
+			max-width: 270px;
+			text-align: center;
+			font-family: v.$ff;
+			font-size: 18px;
+			font-weight: v.$fw-regular;
+			line-height: 140%;
+			color: v.$main-text;
+
+			@include m.media(md) {
+				max-width: 300px;
+				font-size: 20px;
+			}
+
+			@include m.media(xl) {
+				max-width: 338px;
+				font-size: 24px;
+			}
 		}
 	}
 
-	p {
-		max-width: 270px;
-		text-align: center;
-		font-family: v.$ff;
-		font-size: 18px;
-		font-weight: v.$fw-regular;
-		line-height: 140%;
-		color: v.$main-text;
-		margin-top: auto;
+	&-lines {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
 
-		@include m.media(md) {
-			max-width: 300px;
-			font-size: 20px;
+		.line {
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background-color: v.$el;
+
+			&.t {
+				left: 0;
+				top: -183px;
+				transform: rotate(90deg);
+			}
+
+			&.l {
+				width: 100vw;
+				left: -113px;
+				top: 50%;
+				transform: translateY(-50%) scaleX(-1);
+				transform-origin: left;
+			}
+
+			&.r {
+				width: 100vw;
+				right: -113px;
+				top: 50%;
+				transform: translateY(-50%) scaleX(-1);
+				transform-origin: right;
+			}
+
+			&.b {
+				width: 100%;
+				left: 0;
+				bottom: -183px;
+				transform: rotate(90deg);
+			}
 		}
 
-		@include m.media(xl) {
-			max-width: 338px;
-			font-size: 24px;
+		.square {
+			width: 100%;
+			height: 100%;
+			display: block;
+			border: 1px solid v.$el;
+			transform: rotate(45deg);
+			position: relative;
+
+			.circle {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				border-radius: 50%;
+				display: block;
+				width: 366px;
+				height: 366px;
+				border: 1px solid v.$el;
+			}
 		}
 	}
 }
