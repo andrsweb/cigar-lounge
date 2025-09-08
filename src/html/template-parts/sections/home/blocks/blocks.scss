@@ -1,0 +1,216 @@
+@use '../../../../../scss/vars/vars.scss' as v;
+@use '../../../../../scss/mixins/headings' as h;
+@use '../../../../../scss/mixins/text' as t;
+@use '../../../../../scss/mixins/media' as m;
+
+.blocks {
+  padding: 80px 0;
+
+  @include m.media(md) {
+    padding: 100px 0;
+  }
+
+  @include m.media(xl) {
+    padding: 180px 0 90px;
+
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+
+    @include m.media(md) {
+      gap: 50px;
+    }
+
+    @include m.media(xl) {
+      gap: 70px;
+    }
+
+    h2 {
+      color: v.$white;
+      font-family: v.$ff-title;
+      font-size: 22px;
+      font-weight: v.$fw-regular;
+      line-height: 130%;
+      text-transform: uppercase;
+
+      @include m.media(md) {
+        font-size: 36px;
+      }
+
+      @include m.media(xl) {
+        font-size: 50px;
+      }
+    }
+  }
+
+  &-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 36px;
+
+    @include m.media(xl) {
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    &.reverse {
+      @include m.media(xl) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &:first-child {
+      .blocks-item-left {
+        border-top: 0;
+
+        @include m.media(xl) {
+          border-top: 1px solid v.$el;
+        }
+      }
+
+      .blocks-item-left, .blocks-item-right {
+        border-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      .blocks-item-left {
+        border-top: 0;
+        border-bottom: 1px solid v.$el;
+
+        @include m.media(xl) {
+          border-top: 1px solid v.$el;
+        }
+      }
+    }
+
+    @include m.media(xl) {
+      flex-direction: row;
+    }
+
+    &-inner {
+      width: 100%;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      @include m.media(md) {
+        gap: 30px;
+      }
+
+      @include m.media(xl) {
+        gap: 50px;
+      }
+
+      .star {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &-left, &-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: relative;
+      padding: 32px 0;
+      border-top: 1px solid v.$el;
+
+
+      @include m.media(md) {
+        padding: 40px 0;
+      }
+
+      @include m.media(xl) {
+        width: 50%;
+        min-height: 100%;
+        border-bottom: 1px solid v.$el;
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: -40px;
+          transform: translateY(-50%);
+          width: 1px;
+          height: calc(100% - 80px);
+          background-color: v.$el;
+        }
+      }
+    }
+
+    &-left {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-right {
+      h3 {
+        color: v.$white;
+        text-align: center;
+        @include h.h3();
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+
+      @include m.media(md) {
+        gap: 16px;
+      }
+
+      @include m.media(xl) {
+        gap: 24px;
+      }
+    }
+
+    &-texts {
+      max-width: 517px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      p {
+        color: v.$main-text;
+        text-align: center;
+        font-family: v.$ff;
+        font-size: 14px;
+        font-weight: v.$fw-regular;
+        line-height: 145%;
+
+        @include m.media(md) {
+          font-size: 16px;
+        }
+
+        @include m.media(xl) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
