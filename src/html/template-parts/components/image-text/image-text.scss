@@ -55,7 +55,19 @@
 
     p {
       color: v.$main-text;
-      @include t.noahMain();
+      text-align: center;
+      font-family: v.$ff;
+      font-size: 14px;
+      font-weight: v.$fw-regular;
+      line-height: 145%;
+
+      @include m.media(md) {
+        font-size: 16px;
+      }
+
+      @include m.media(xl) {
+        font-size: 20px;
+      }
     }
   }
 }
