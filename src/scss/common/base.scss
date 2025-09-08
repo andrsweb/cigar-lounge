@@ -41,22 +41,6 @@ ul {
 	list-style: none
 }
 
-.section-overlay {
-	&-wrapper {
-		position: relative;
-	}
-
-	&-bg {
-		width: 1360px;
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		height: 100%;
-		z-index: -1;
-	}
-}
-
 .wrapper {
 	position: relative;
 	display: flex;

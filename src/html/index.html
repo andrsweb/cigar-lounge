@@ -4,17 +4,10 @@
 	@@include( 'template-parts/sections/home/hero/hero.html' )
 	@@include( 'template-parts/sections/home/desc/desc.html' )
 	@@include( 'template-parts/sections/home/title-text/title-text.html' )
-	<div class="section-overlay">
-		<div class="container no-padding">
-			<div class="section-overlay-wrapper">
-				<img class="section-overlay-bg" src="/img/section-overlay.svg" alt="">
-				@@include( 'template-parts/components/image-text/image-text.html', {
-				"type": "", "src": "/img/it-1.jpg", "h2": "Сочетание классики и современности",
-				"desc": "Элегантные детали и качественные материалы наполняют лаундж духом аристократизма. Особый шарм пространству придают дорогие предметы искусства современных авторов. Атмосферу таинственности и приватности поддерживают тёмные тона интерьера, тёплый приглушённый свет и, конечно, статусность места. В Romanov Cigar Lounge вы можете наедине наслаждаться любимыми ароматами. Для важных и закрытых встреч гостям доступны приватные кабинеты"
-				} )
-			</div>
-		</div>
-	</div>
+	@@include( 'template-parts/components/image-text/image-text.html', {
+	"type": "", "src": "/img/it-1.jpg", "h2": "Сочетание классики и современности",
+	"desc": "Элегантные детали и качественные материалы наполняют лаундж духом аристократизма. Особый шарм пространству придают дорогие предметы искусства современных авторов. Атмосферу таинственности и приватности поддерживают тёмные тона интерьера, тёплый приглушённый свет и, конечно, статусность места. В Romanov Cigar Lounge вы можете наедине наслаждаться любимыми ароматами. Для важных и закрытых встреч гостям доступны приватные кабинеты"
+	} )
 </main>
 
 @@include( 'template-parts/footer/footer.html' )
