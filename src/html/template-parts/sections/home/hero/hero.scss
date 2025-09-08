@@ -77,7 +77,11 @@
 		}
 
 		p {
-			max-width: 270px;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 270px;
 			text-align: center;
 			font-family: v.$ff;
 			font-size: 18px;
