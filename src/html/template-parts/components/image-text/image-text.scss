@@ -7,23 +7,45 @@
   width: 100%;
   padding: 60px 0;
 
+  &.reverse {
+    .image-text-wrapper {
+      @include m.media(xl) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
   &-wrapper {
     display: flex;
-    align-items: stretch;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 42px;
+
+    @include m.media(xl) {
+      flex-direction: row;
+      align-items: stretch;
+    }
   }
 
   &-img {
-    width: calc(50% - 21px);
-    max-width: 619px;
+    width: 100%;
+
+    @include m.media(xl) {
+      width: calc(50% - 21px);
+      max-width: 619px;
+    }
   }
 
   &-desc {
-    width: calc(50% - 21px);
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 32px;
+
+    @include m.media(xl) {
+      width: calc(50% - 21px);
+    }
 
     h2 {
       color: v.$white;
