@@ -84,6 +84,14 @@
       .blocks-item-left, .blocks-item-right {
         border-bottom: 0;
       }
+
+      .blocks-item-right {
+        @include m.media(xl) {
+          &:after {
+            display: none;
+          }
+        }
+      }
     }
 
     &:last-child {
@@ -93,6 +101,10 @@
 
         @include m.media(xl) {
           border-top: 1px solid v.$el;
+
+            &:after {
+              display: none;
+            }
         }
       }
     }
