@@ -22,7 +22,9 @@
 @forward '../html/template-parts/components/slider/slider';
 
 //sections
+//verify
 @forward '../html/template-parts/sections/verify/verify';
+//home
 @forward '../html/template-parts/sections/home/hero/hero';
 @forward '../html/template-parts/sections/home/desc/desc';
 @forward '../html/template-parts/sections/home/title-text/title-text';
@@ -30,3 +32,7 @@
 @forward '../html/template-parts/sections/home/image/image';
 @forward '../html/template-parts/sections/home/blocks/blocks';
 @forward '../html/template-parts/sections/home/quote/quote';
+//giftcards
+@forward '../html/template-parts/sections/giftcards/hero/hero';
+
+
