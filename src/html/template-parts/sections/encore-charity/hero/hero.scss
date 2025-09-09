@@ -1,0 +1,116 @@
+@use '../../../../../scss/vars/vars' as v;
+@use '../../../../../scss/mixins/media' as m;
+
+.hero-t {
+  width: 100%;
+  padding: 90px 0 40px;
+
+  @include m.media(md) {
+    padding: 144px 0 50px;
+  }
+
+  @include m.media(xl) {
+    padding: 144px 0 50px;
+  }
+
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+
+    h1 {
+      color: v.$white;
+      font-family: v.$ff-title;
+      font-size: 22px;
+      font-weight: v.$fw-regular;
+      line-height: 130%;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+
+      @include m.media(md) {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      @include m.media(xl) {
+        font-size: 64px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 40px;
+
+    @include m.media(md) {
+      gap: 60px;
+    }
+
+    @include m.media(xl) {
+      gap: 32px;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+    }
+  }
+
+  &-left {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    @include m.media(xl) {
+      max-width: 389px;
+    }
+  }
+
+  &-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+
+    @include m.media(xl) {
+      max-width: 619px;
+      gap: 40px;
+    }
+  }
+
+  &-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 450px;
+
+    @include m.media(md) {
+      max-width: 542px;
+    }
+
+    @include m.media(xl) {
+      max-width: 100%;
+    }
+
+    p {
+      color: v.$main-text;
+      font-family: v.$ff;
+      font-size: 14px;
+      font-weight: v.$fw-regular;
+      line-height: 140%;
+
+      @include m.media(md) {
+        font-size: 16px;
+      }
+
+      @include m.media(xl) {
+        font-size: 24px;
+      }
+    }
+  }
+}
