@@ -5,6 +5,7 @@
 
 .text-desc {
   width: 100%;
+  position: relative;
 
   &.xl {
     padding: 90px 0;
@@ -14,7 +15,7 @@
     }
 
     @include m.media(xl) {
-      padding: 300px 0 230px;
+      padding: 390px 0 230px;
     }
 
     .text-desc-wrapper {
@@ -35,6 +36,7 @@
     align-items: center;
     margin: 0 auto;
     gap: 30px;
+    position: relative;
 
     @include m.media(md) {
       gap: 40px;
@@ -42,6 +44,30 @@
 
     @include m.media(xl) {
       gap: 56px;
+    }
+  }
+
+  .square {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 528px;
+    height: 528px;
+    display: block;
+    outline: 1px solid v.$el;
+    z-index: -1;
+
+    @include m.media(md) {
+      top: 60%;
+      width: 768px;
+      height: 768px;
+    }
+
+    @include m.media(xl) {
+      top: 60%;
+      width: 960px;
+      height: 960px;
     }
   }
 
