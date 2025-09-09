@@ -247,6 +247,7 @@
 			flex-direction: column-reverse;
 			align-items: center;
 			gap: 30px;
+			padding-bottom: 40px;
 
 			@include m.media(md) {
 				flex-direction: row;
