@@ -1,7 +1,351 @@
 @use '../../../scss/vars/vars' as v;
+@use '../../../scss/mixins/global' as g;
+@use '../../../scss/mixins/media' as m;
 
 .footer {
+	padding: 40px 0;
+
 	&-wrapper {
 		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 60px;
+
+		@include m.media(md) {
+			gap: 120px;
+		}
+	}
+
+	&-top {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 32px;
+
+		@include m.media(xl) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.footer-left {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 18px;
+			width: 100%;
+			max-width: 420px;
+
+			@include m.media(md) {
+				gap: 22px;
+			}
+
+			@include m.media(xl) {
+				gap: 40px;
+			}
+
+			.footer-logo {
+				img {
+					width: auto;
+					height: 25px;
+				}
+
+				@include m.media(md) {
+					img {
+						height: 40px;
+					}
+
+				}
+
+				@include m.media(xl) {
+					img {
+						height: 68px;
+					}
+				}
+			}
+
+			p {
+				color: v.$white;
+				font-family: v.$ff;
+				font-size: 18px;
+				font-weight: v.$fw-regular;
+				line-height: 130%;
+
+				@include m.media(md) {
+					font-size: 20px;
+				}
+			}
+		}
+
+		.footer-right {
+			width: 100%;
+			max-width: 619px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 42px;
+
+			@include m.media(md) {
+				gap: 50px;
+			}
+
+			@include m.media(xl) {
+				gap: 80px;
+			}
+
+			.footer-row {
+				width: 100%;
+				display: flex;
+				flex-direction:  column;
+				align-items: flex-start;
+				gap: 20px;
+
+				@include m.media(md) {
+					gap: 24px;
+				}
+
+				&-title {
+					color: v.$main-text;
+					font-family: v.$ff;
+					font-size: 13px;
+					font-style: normal;
+					font-weight: v.$fw-regular;
+					line-height: 150%;
+
+					@include m.media(md) {
+						font-size: 14px;
+					}
+
+					@include m.media(xl) {
+						font-size: 16px;
+					}
+				}
+
+				.footer-cols {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 14px;
+
+					@include m.media(md) {
+						gap: 78px;
+						flex-direction: row;
+					}
+				}
+
+				.footer-col {
+					width: 100%;
+
+					@include m.media(md) {
+						max-width: 45%;
+					}
+
+					@include m.media(xl) {
+						max-width: 225px;
+					}
+
+					&.type-a {
+						max-width: 100%;
+
+						@include m.media(md) {
+							max-width: 45%;
+						}
+
+						@include m.media(xl) {
+							max-width: 320px;
+						}
+					}
+
+					.footer-nav {
+						width: 100%;
+					}
+
+					.menu, .footer-list {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						gap: 14px;
+
+						@include m.media(md) {
+							gap: 16px;
+						}
+
+						@include m.media(xl) {
+							gap: 20px;
+						}
+
+						&-item, .col-item {
+							a, p {
+								color: v.$white;
+								font-family: v.$ff;
+								font-size: 16px;
+								font-weight: v.$fw-regular;
+								line-height: 145%;
+
+								@include m.media(md) {
+									font-size: 18px;
+								}
+
+								@include m.media(xl) {
+									font-size: 20px;
+								}
+							}
+						}
+
+						.col-item {
+							a {
+								font-size: 20px;
+
+								@include m.media(md) {
+									font-size: 22px;
+								}
+
+								@include m.media(xl) {
+									font-size: 28px;
+								}
+							}
+
+							span {
+								color: v.$gray;
+								font-family: v.$ff;
+								font-size: 16px;
+								font-weight: v.$fw-regular;
+								line-height: 145%;
+
+								@include m.media(md) {
+									font-size: 18px;
+								}
+
+								@include m.media(xl) {
+									font-size: 20px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-bottom {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+
+		@include m.media(md) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			gap: 32px;
+		}
+
+		.copyright {
+			color: v.$main-text;
+			font-family: v.$ff;
+			font-size: 14px;
+			font-weight: v.$fw-regular;
+			line-height: 150%;
+			order: 2;
+
+			@include m.media(md) {
+				order: 1;
+			}
+
+			@include m.media(xl) {
+				font-size: 16px;
+			}
+		}
+	}
+
+	&-socials {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		position: relative;
+		order: 1;
+
+		@include m.media(md) {
+			order: 2;
+		}
+
+		li {
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 50px;
+				height: 50px;
+				background-color: transparent;
+				border-radius: 50%;
+				outline: 1px solid v.$el;
+				transition: background-color ease v.$tr, border-color ease v.$tr;
+
+				@include m.media(md) {
+					width: 50px;
+					height: 50px;
+				}
+
+				svg {
+					width: 100%;
+					height: 100%;
+					max-width: 19px;
+					max-height: 19px;
+
+					@include m.media(md) {
+						max-width: 22px;
+						max-height: 22px;
+					}
+
+					path {
+						transition: fill ease v.$tr;
+					}
+				}
+
+				@include g.hover() {
+					background-color: v.$white;
+					border-color: v.$white;
+
+					svg {
+						path {
+							fill: v.$background;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.scroll-top {
+		position: absolute;
+		right: 40px;
+		bottom: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		height: 30px;
+		background-color: transparent;
+		transition: transform ease v.$tr;
+		outline: 0;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		cursor: pointer;
+		order: 3;
+
+		@include m.media(md) {
+			position: static;
+			right: auto;
+			bottom: auto;
+		}
+
+		@include g.hover() {
+			transform: translateY(-5px);
+		}
 	}
 }

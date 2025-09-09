@@ -117,6 +117,10 @@
       &-disabled {
         cursor: not-allowed;
         opacity: v.$op;
+
+        @include g.hover() {
+          transform: translateX(0);
+        }
       }
     }
   }
