@@ -161,6 +161,11 @@
 		background-color: v.$background;
 		animation: fadeIn ease-out forwards v.$tr;
 		z-index: 99;
+		padding: 150px 0 70px;
+
+		@include m.media(md) {
+			padding: 150px 0;
+		}
 
 		@keyframes fadeIn {
 			0% { opacity: 0; } 100% { opacity: 1; }
@@ -172,11 +177,6 @@
 			flex-direction: column;
 			align-items: center;
 			gap: 70px;
-			padding: 150px 0 70px;
-
-			@include m.media(md) {
-				padding: 150px 0;
-			}
 
 			nav {
 				max-width: 496px;
