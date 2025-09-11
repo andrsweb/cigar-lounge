@@ -19,7 +19,6 @@
 
 //components
 @forward '../html/template-parts/components/lines-s/lines-s';
-@forward '../html/template-parts/components/image-text/image-text';
 @forward '../html/template-parts/components/slider/slider';
 
 //sections
@@ -30,6 +29,7 @@
 @forward '../html/template-parts/sections/home/desc/desc';
 @forward '../html/template-parts/sections/home/title-text/title-text';
 @forward '../html/template-parts/sections/home/text-desc/text-desc';
+@forward '../html/template-parts/sections/home/image-text/image-text';
 @forward '../html/template-parts/sections/home/image/image';
 @forward '../html/template-parts/sections/home/blocks/blocks';
 @forward '../html/template-parts/sections/home/quote/quote';
