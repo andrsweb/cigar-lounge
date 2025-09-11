@@ -258,4 +258,49 @@
       height: 275px;
     }
   }
+
+  &.lines-cigars {
+    .square, .square-l, .square-r, .line {
+      position: absolute;
+    }
+
+    .square {
+      width: 340px;
+      height: 340px;
+      left: 50%;
+      top: 50%;
+      border: 1px solid v.$el;
+      transform: translate(-50%, -50%) rotate(45deg);
+
+      @include m.media(md) {
+        width: 540px;
+        height: 540px;
+      }
+    }
+
+    .square-l, .square-r {
+      width: 50%;
+      height: 50%;
+      border: 1px solid v.$el;
+
+    }
+
+    .square-l {
+      border-top-right-radius: 100px;
+      border-left: 0;
+      border-bottom: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .square-r {
+      border-bottom-left-radius: 100px;
+      border-right: 0;
+      border-top: 0;
+      top: 0;
+      right: 0;
+    }
+
+    .line {}
+  }
 }
