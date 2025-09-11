@@ -1,0 +1,9 @@
+@use '../../../../../scss/vars/vars' as v;
+@use '../../../../../scss/mixins/media' as m;
+
+.hero-a {
+  .lines-box {
+    &-private {
+    }
+  }
+}
