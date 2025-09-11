@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	scrollToTop();
 })
 
+document.getElementById("year").textContent = new Date().getFullYear().toString();
+
 const toggleMenu = () => {
 	const header = document.querySelector('.header');
 	const burgerButton = header?.querySelector('.burger-button');
