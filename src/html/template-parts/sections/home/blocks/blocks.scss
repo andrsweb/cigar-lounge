@@ -115,7 +115,6 @@
 
     &-inner {
       width: 100%;
-      min-height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -207,7 +206,7 @@
       align-items: center;
       gap: 20px;
 
-      p {
+      p, li {
         color: v.$main-text;
         text-align: center;
         font-family: v.$ff;
@@ -221,6 +220,32 @@
 
         @include m.media(xl) {
           font-size: 20px;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        @include m.media(md) {
+          gap: 12px;
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          &:before {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid v.$el;
+            transform: rotate(45deg);
+          }
         }
       }
     }
