@@ -1,0 +1,183 @@
+@use '../../../../../scss/vars/vars' as v;
+@use '../../../../../scss/mixins/media' as m;
+
+.hero-a {
+  width: 100%;
+  min-height: 680px;
+  padding: 90px 0 208px;
+  position: relative;
+  overflow: hidden;
+
+  @include m.media(md) {
+    min-height: 900px;
+    padding: 111px 0 284px;
+  }
+
+  @include m.media(xl) {
+    min-height: 960px;
+    padding: 144px 0 185px;
+  }
+
+  .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  .lines-box {
+    .circle1, .circle2, .circle3 {
+      display: block;
+      position: absolute;
+      border: 1px solid v.$el;
+      border-radius: 50%;
+    }
+
+    .circle1 {
+      width: 1359px;
+      height: 1359px;
+      position: absolute;
+      left: 50%;
+      top: 36%;
+      transform: translateX(-50%);
+
+      @include m.media(md) {
+        width: 1359px;
+        height: 1359px;
+        top: 27%;
+      }
+
+      @include m.media(xl) {
+        width: 1359px;
+        height: 1359px;
+        top: 27%;
+      }
+
+      .line {
+        position: absolute;
+        left: 50%;
+        top: -100%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 100%;
+        background-color: v.$el;
+      }
+    }
+
+    .circle2, .circle3 {
+      width: 1448px;
+      height: 1448px;
+
+      @include m.media(xl) {
+        width: 1738px;
+        height: 1738px;
+      }
+    }
+
+    .circle2 {
+      top: -5%;
+      right: 50%;
+
+      @include m.media(md) {
+        top: 20%;
+      }
+
+      @include m.media(xl) {
+        top: 11%;
+      }
+    }
+
+    .circle3 {
+      top: -5%;
+      left: 50%;
+
+      @include m.media(md) {
+        top: 20%;
+      }
+
+      @include m.media(xl) {
+        top: 11%;
+      }
+    }
+  }
+
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include m.media(md) {}
+
+    @include m.media(xl) {}
+  }
+
+  &-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+
+    @include m.media(md) {
+      gap: 24px;
+    }
+
+    @include m.media(xl) {
+      gap: 60px;
+    }
+
+    h1 {
+      color: v.$white;
+      font-family: v.$ff-title;
+      font-size: 22px;
+      font-weight: v.$fw-regular;
+      line-height: 130%;
+      text-transform: uppercase;
+
+      @include m.media(md) {
+        font-size: 40px;
+      }
+
+      @include m.media(xl) {
+        font-size: 64px;
+      }
+    }
+  }
+
+  &-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+
+    @include m.media(xl) {
+      width: 50%;
+      margin-left: auto;
+    }
+
+    p {
+      color: v.$main-text;
+      font-family: v.$ff;
+      font-size: 18px;
+      font-weight: v.$fw-regular;
+      line-height: 140%;
+      max-width: 313px;
+
+      @include m.media(md) {
+        max-width: 357px;
+        font-size: 20px;
+      }
+
+      @include m.media(xl) {
+        max-width: 438px;
+        font-size: 24px;
+      }
+    }
+  }
+}
