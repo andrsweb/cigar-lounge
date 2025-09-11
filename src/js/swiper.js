@@ -1,31 +1,41 @@
 import Swiper from 'swiper';
-import {Navigation, EffectCoverflow} from "swiper/modules";
+import { Navigation, EffectCoverflow, EffectFade } from "swiper/modules";
 
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
-    initSwiper();
-})
-
-const initSwiper = () => {
-    const swiper = new Swiper('.swiper-img', {
-        grabCursor: true,
+    initSwiper('.swiper-f', 'fade');
+    initSwiper('.swiper-img', 'coverflow', {
         initialSlide: 1,
-        speed: 700,
-        modules: [Navigation, EffectCoverflow],
-        navigation: {
-            nextEl: '.swiper-next',
-            prevEl: '.swiper-prev',
-        },
-        effect: "coverflow",
-        centeredSlides: true,
         coverflowEffect: {
             slideShadows: false,
             rotate: 0,
             stretch: 0,
             depth: 150,
             modifier: 8
-        },
-    })
-}
+        }
+    });
+});
 
+const commonSwiperOptions = {
+    grabCursor: true,
+    speed: 700,
+    modules: [Navigation],
+    centeredSlides: true
+};
+
+function initSwiper(selector, effect, effectOptions = {}) {
+    const container = document.querySelector(selector);
+    if (!container) return;
+
+    new Swiper(container, {
+        ...commonSwiperOptions,
+        modules: [...commonSwiperOptions.modules, effect === 'fade' ? EffectFade : EffectCoverflow],
+        effect: effect,
+        navigation: {
+            nextEl: container.querySelector('.swiper-next'),
+            prevEl: container.querySelector('.swiper-prev'),
+        },
+        ...effectOptions
+    });
+}
