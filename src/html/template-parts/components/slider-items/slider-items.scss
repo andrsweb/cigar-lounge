@@ -1,0 +1,147 @@
+@use '../../../../scss/vars/vars' as v;
+@use '../../../../scss/mixins/media' as m;
+@use '../../../../scss/mixins/global' as g;
+
+.slider-items {
+  .swiper-slide {
+    opacity: 0 !important;
+
+    &-active {
+      opacity: 1 !important;
+    }
+
+    @include g.hover() {
+      .slide-img {
+        filter: brightness(1.2);
+      }
+    }
+  }
+
+  .slide-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    background-color: v.$background;
+  }
+
+  .slide-top {
+    h2 {
+      color: v.$white;
+      font-family: v.$ff-title;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 130%;
+      text-transform: uppercase;
+
+      @include m.media(md) {
+        font-size: 36px;
+      }
+
+      @include m.media(xl) {
+        font-size: 50px;
+      }
+    }
+  }
+
+  .slide-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+
+    @include m.media(xl) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    p {
+      width: 100%;
+      max-width: 356px;
+      color: v.$main-text;
+      font-family: v.$ff;
+      font-size: 14px;
+      font-style: normal;
+      text-align: center;
+      font-weight: v.$fw-regular;
+      line-height: 145%;
+      order: 1;
+
+      @include m.media(md) {
+        font-size: 16px;
+      }
+
+      @include m.media(xl) {
+        font-size: 20px;
+        text-align: left;
+      }
+    }
+
+    .slide-img {
+      max-height: 476px;
+      transition: filter ease v.$tr;
+
+      @include m.media(md) {
+        max-height: 476px;
+      }
+
+      @include m.media(xl) {
+        max-height: 602px;
+        order: 2;
+      }
+    }
+
+    .slide-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      order: 3;
+
+      @include m.media(xl) {
+        width: 100%;
+        max-width: 312px;
+      }
+
+      .mod-s {
+        @include m.media(xl) {
+          display: none;
+        }
+      }
+
+      span {
+        display: none;
+        color: v.$main-text;
+        font-family: v.$ff;
+        font-size: 16px;
+        font-weight: v.$fw-regular;
+        line-height: 150%;
+
+        @include m.media(xl) {
+          display: inline-block;
+        }
+      }
+
+      ul {
+        display: none;
+        column-count: 2;
+        column-gap: 20px;
+
+        @include m.media(xl) {
+          display: inline-block;
+        }
+
+        li {
+          color: v.$white;
+          font-family: v.$ff;
+          text-align: left;
+          font-size: 20px;
+          font-weight: v.$fw-regular;
+          line-height: 145%;
+        }
+      }
+    }
+  }
+}

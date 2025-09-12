@@ -4,7 +4,9 @@ import { Navigation, EffectCoverflow, EffectFade } from "swiper/modules";
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
-    initSwiper('.swiper-f', 'fade');
+    initSwiper('.swiper-f', 'fade', {
+        slidesPerView: 1,
+    });
     initSwiper('.swiper-img', 'coverflow', {
         initialSlide: 1,
         coverflowEffect: {

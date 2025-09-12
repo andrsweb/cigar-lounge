@@ -12,6 +12,7 @@
 //ui
 @forward 'ui/button';
 @forward 'ui/hero-lines';
+@forward 'ui/swiper';
 
 //common
 @forward '../html/template-parts/header/header';
@@ -20,6 +21,7 @@
 //components
 @forward '../html/template-parts/components/lines-s/lines-s';
 @forward '../html/template-parts/components/slider/slider';
+@forward '../html/template-parts/components/slider-items/slider-items';
 
 //sections
 //verify
