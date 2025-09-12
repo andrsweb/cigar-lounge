@@ -1,6 +1,5 @@
 @use '../../../../scss/vars/vars.scss' as v;
 @use '../../../../scss/mixins/media' as m;
-@use '../../../../scss/mixins/text' as t;
 
 .verify {
   width: 100%;
@@ -78,7 +77,12 @@
     }
 
     p {
-      @include t.noahMain();
+      color: v.$main-text;
+      text-align: center;
+      font-family: v.$ff;
+      font-size: 20px;
+      font-weight: v.$fw-regular;
+      line-height: 145%;
     }
   }
 

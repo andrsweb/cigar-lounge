@@ -1,6 +1,4 @@
 @use '../../../../../scss/vars/vars.scss' as v;
-@use '../../../../../scss/mixins/headings' as h;
-@use '../../../../../scss/mixins/text' as t;
 @use '../../../../../scss/mixins/media' as m;
 
 .blocks {
@@ -180,7 +178,14 @@
       h3 {
         color: v.$white;
         text-align: center;
-        @include h.h3();
+        font-family: v.$ff;
+        font-size: 20px;
+        font-weight: v.$fw-regular;
+        line-height: 130%;
+
+        @include m.media(md) {
+          font-size: 28px;
+        }
       }
     }
 

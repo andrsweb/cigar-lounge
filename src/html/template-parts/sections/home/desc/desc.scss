@@ -1,5 +1,4 @@
 @use '../../../../../scss/vars/vars.scss' as v;
-@use '../../../../../scss/mixins/headings' as h;
 @use '../../../../../scss/mixins/media' as m;
 
 .desc {
@@ -24,14 +23,20 @@
       max-width: 343px;
       color: v.$white;
       text-align: center;
-      @include h.h2();
+      font-family: v.$ff-title;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: v.$fw-regular;
+      line-height: 140%;
 
       @include m.media(md) {
         max-width: 566px;
+        font-size: 28px;
       }
 
       @include m.media(xl) {
         max-width: 735px;
+        font-size: 36px;
       }
     }
   }

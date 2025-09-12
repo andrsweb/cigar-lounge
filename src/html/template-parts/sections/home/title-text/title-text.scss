@@ -1,6 +1,4 @@
 @use '../../../../../scss/vars/vars.scss' as v;
-@use '../../../../../scss/mixins/headings' as h;
-@use '../../../../../scss/mixins/text' as t;
 @use '../../../../../scss/mixins/media' as m;
 
 .title-text {
@@ -41,20 +39,32 @@
       width: 100%;
       max-width: 830px;
       color: v.$white;
-      @include h.h3();
+      font-family: v.$ff-title;
+      font-size: 20px;
+      font-weight: v.$fw-regular;
+      line-height: 140%;
+
+      @include m.media(xl) {
+        font-size: 28px;
+      }
     }
 
     p {
       width: 100%;
       color: v.$main-text;
-      @include t.noahMain();
+      font-family: v.$ff;
+      font-size: 14px;
+      font-weight: v.$fw-regular;
+      line-height: 145%;
 
       @include m.media(md) {
         max-width: 237px;
+        font-size: 16px;
       }
 
       @include m.media(xl) {
         max-width: 420px;
+        font-size: 20px;
       }
     }
   }

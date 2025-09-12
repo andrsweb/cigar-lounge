@@ -1,7 +1,5 @@
 @use '../../../../../scss/vars/vars.scss' as v;
 @use '../../../../../scss/mixins/media' as m;
-@use '../../../../../scss/mixins/headings' as h;
-@use '../../../../../scss/mixins/text' as t;
 
 .text-desc {
   width: 100%;
@@ -80,7 +78,20 @@
     h2 {
       color: v.$white;
       text-align: center;
-      @include h.h1();
+      font-family: v.$ff-title;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: v.$fw-regular;
+      line-height: 130%;
+      text-transform: uppercase;
+
+      @include m.media(md) {
+        font-size: 36px;
+      }
+
+      @include m.media(xl) {
+        font-size: 50px;
+      }
     }
 
     .separator {
