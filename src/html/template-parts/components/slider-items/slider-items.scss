@@ -3,6 +3,21 @@
 @use '../../../../scss/mixins/global' as g;
 
 .slider-items {
+  padding: 30px 0;
+
+  &-wrapper {
+    border-bottom: 1px solid v.$el;
+    padding: 58px 0;
+
+    @include m.media(md) {
+      padding: 70px 0;
+    }
+
+    @include m.media(xl) {
+      padding: 105px 0 150px;
+    }
+  }
+
   .swiper-slide {
     opacity: 0 !important;
 
